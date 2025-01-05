@@ -2,7 +2,8 @@
 <html lang="en">  
 <head>  
     <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="/static/bru_icon.png">
     <title>Registration Form</title>  
 </head>  
 <style>
@@ -47,6 +48,11 @@
             color: black;
           margin-bottom: 5px;
             border: 1px solid rgb(214, 8, 241);
+            padding: 5px 3px;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 10px;
+
         }  
     
         input[type="text"],  
@@ -80,6 +86,7 @@
         }  
         .icon_log{
             border-radius: 50%;
+            margin:0px;
         }
         .head-top{
           
@@ -93,7 +100,7 @@
         }
         .register-here{
             font-size: 28px;
-            background-color: rgb(247, 52, 3);
+            background: linear-gradient(267deg, rgb(224, 224, 51), rgb(215, 66, 200), rgb(31, 28, 31));
             padding: 10px;
             color: white;
             border: none;
@@ -102,7 +109,13 @@
         .register-here:hover{
             background-color: rgb(3, 219, 247);
         }
-    
+    #date{
+        background: linear-gradient(267deg, rgb(2, 127, 243), rgb(8, 243, 102), rgb(235, 8, 235));
+        cursor: pointer;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
         @media (max-width: 500px) {  
             form {  
                 width: 90%;  /* Responsive design for smaller screens */  
@@ -111,6 +124,7 @@
     </style>
 
 <body>  
+  
     <img class="icon_log" src="/static/bru_log.png" alt="">
     <h1 class="head-top">Borana University Office Of the Main Registration Silip Form</h1>  
     <form method="POST" action="/register">  
@@ -159,5 +173,10 @@
         
         <button class="register-here" type="submit" value="Register">Register</button>  
     </form>  
+    <h3 id="date">&copy;</h3>
+    <script>
+        let date = new Date().getFullYear();
+        document.getElementById('date').innerHTML = `All Rights Reserved BRU &copy; ${date}`;
+    </script>
 </body>  
 </html>
